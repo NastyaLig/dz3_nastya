@@ -1,0 +1,120 @@
+@import "../utils/parameters";
+@import "../utils/mixins";
+
+.first-section {
+    background-color: $c-secondary;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+    }
+
+    &__content  {
+        max-width: 55rem;
+        padding: 20rem 0 5rem;
+        min-height: 72rem;
+    }
+
+    &__title {
+        color: $c-text;
+        font-weight: bold;
+        font-size: 5.5rem;
+        line-height: 138%;
+        letter-spacing: 1.11px;
+        margin: 0 0 5rem;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.9rem 2.8rem;
+
+        background: $c-primary;
+        border: 1px solid $c-primary;
+        box-shadow: 0px 3px 18px rgba(0, 201, 201, 0.55);
+        border-radius: 1.4rem;
+
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: $c-text;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.0);
+            color: $c-text;
+        }
+
+        span {}
+
+        img {
+            margin-left: 1rem;
+        }
+    }
+
+    &__img  {
+        position: absolute;
+        right: -7rem;
+        bottom: 0;
+        max-width: 57vw;
+    }
+
+    .primary {
+        display: block;
+        color: $c-primary;
+    }
+
+    .orange {
+        color: #F3AF47;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .first-section {
+
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__img {
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .first-section {
+
+        &__content {
+            padding: 13rem 0 5rem;
+            min-height: 50rem;
+        }
+
+        &__title {
+            font-size: 4rem;
+            max-width: 40rem;
+        }
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .first-section {
+        &__content {
+            min-height: auto;
+            padding: 14rem 0 0;
+        }
+
+        &__title {
+            font-size: 3rem;
+            margin: 0 0 3rem;
+        }
+
+        &__link {
+            padding: 1.2rem 1.5rem;
+        }
+
+        &__img {
+            position: static;
+            max-width: 100%;
+        }
+    }
+}

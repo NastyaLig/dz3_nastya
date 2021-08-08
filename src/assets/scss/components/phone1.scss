@@ -1,0 +1,222 @@
+@import "../utils/parameters";
+
+
+.phone1 {
+	padding: 60px 0px 200px 0px;
+	&__body {
+		display: flex;
+		background: $c-secondary;
+		border-radius: 50px;
+		min-height: 540px;
+	}
+
+	&__imgs-bloc {
+		margin: -50px 0px;
+		width: 45%;
+		text-align: right;
+	}
+
+	&__imgs {
+		position: relative;
+		display: inline-block;
+	}
+
+	&__phone-img {
+		display: block;
+		position: relative;
+		z-index: 1;
+		max-width: 30vw;
+		height: auto;
+	}
+
+	&__coffe-img {
+		position: absolute;
+		left: -125px;
+		top: 160px;
+		display: block;
+		max-width: 20vw;
+		height: auto;
+	}
+
+	&__chips-img {
+		position: absolute;
+		right: -140px;
+		bottom: 0;
+		z-index: 2;
+		display: block;
+		max-width: 19vw;
+		height: auto;
+	}
+
+	&__content {
+		padding: 115px 0px 40px 0px;
+		margin: 0px 0px 0px 80px;
+		width: 55%;
+	}
+
+	&__subtitle {
+		color: $c-text2;
+		font-weight: 400;
+		font-size: 1.8rem;
+		line-height: 100%;
+		margin: 0px 0px 22px 0px;
+	}
+
+	&__title {
+		max-width: 195px;
+		font-weight: 900;
+		font-size: 4rem;
+		line-height: 138%;
+		color: $c-text;
+		margin: 0px 0px 25px 0px;
+	}
+
+	&__txt {
+		padding: 0px 20px 0px 0px;
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 150%;
+		max-width: 434px;
+        color:$c-text2;
+	}
+}
+
+
+@media (max-width: $lg) {
+	.phone1 {
+		&__coffe-img {
+			left: -100px;
+		}
+	}
+}
+
+@media (max-width: $md) {
+	.phone1 {
+		&__body {
+			min-height: 380px;
+		}
+
+		&__coffe-img {
+			left: -65px;
+			top: 110px;
+		}
+
+		&__chips-img {
+			right: -100px;
+		}
+
+		&__content {
+			padding: 80px 0px 60px 0px;
+			margin-left: 40px;
+		}
+
+		&__subtitle {
+			font-size: 1.7rem;
+			margin-bottom: 10px;
+		}
+
+		&__title {
+			font-size: 3.5rem;
+			margin-bottom: 10px;
+		}
+
+		&__txt {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media (max-width: $sm) {
+	.phone1 {
+		padding: 30px 0px 150px 0px;
+
+		&__body {
+			flex-direction: row-reverse;
+		}
+
+		&__imgs-bloc {
+			order: 2;
+		    margin-bottom: -40px;
+		}
+
+        &__coffe-img {
+			left: -60px;
+			top: 70px;
+		}
+
+		&__chips-img {
+			right: -60px;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			align-self: flex-end;
+			padding: 40px 40px 0px;
+			margin-bottom: 40px;
+			order: 1;
+		}
+
+		&__subtitle {
+			text-align: center;
+		}
+
+		&__title {
+			max-width: 100%;
+			font-size: 3.5rem;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		&__txt {
+			max-width: 400px;
+            text-align: center;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.phone1 {
+		padding: 20px 0px 100px 0px;
+
+        &__body {
+			flex-direction: column;
+		}
+
+		&__imgs-bloc {
+			width: 100%;
+			text-align: center;
+		    padding-top: 50px;
+		}
+
+        &__coffe-img {
+			left: -40px;
+			top: 40px;
+		}
+
+		&__chips-img {
+			right: -40px;
+		}
+
+        &__content {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		&__subtitle {
+			text-align: center;
+		}
+
+		&__title {
+			max-width: 100%;
+			text-align: center;
+		}
+
+		&__txt {
+			max-width: 100%;
+		}
+
+	}
+}

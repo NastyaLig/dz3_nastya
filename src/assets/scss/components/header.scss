@@ -1,3 +1,93 @@
 // для каждого компонента нужно импортить переменные, чтобы их использовать
 @import "../utils/parameters";
 @import "../utils/mixins";
+
+.header {
+    padding: 3.1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.logo {
+    display: inline-block;
+
+    &__img {}
+}
+
+.link-header {
+    display: inline-block;
+    padding: 1.6rem 2.9rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: $c-text;
+    margin-left: 2rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.0);
+
+    &:hover {
+        border-color:  $c-text;
+        background-color: $c-text;
+        color: #fff;
+    }
+
+    &--inverse {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #fff;
+        border-color:  $c-text;
+        background-color: $c-text;
+
+        &:hover {
+            //.link-header--inverse:hover
+            background-color: rgba(0,0,0,0.0);
+            color: $c-text;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .link-header {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: $xs) {
+
+    .header {
+        padding: 1rem 0;
+
+        &__row {
+            justify-content: center;
+        }
+
+        &__links {
+            justify-content: flex-start;
+        }
+    }
+
+    .logo {
+        margin: 0 0 1.5rem;
+    }
+
+    .link-header {
+        padding: 1.1rem 1.2rem;
+        margin-left: 0;
+    }
+
+}
